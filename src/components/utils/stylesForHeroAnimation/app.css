@@ -1,0 +1,72 @@
+/* hero section animated text */
+
+@keyframes slide-right-fade-in {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-fade-in {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right-fade-in-slow {
+  0% {
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-fade-in-slow {
+  0% {
+    transform: translateX(25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* classnames */
+.slide-right-fade-in {
+  animation-name: slide-right-fade-in;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.slide-left-fade-in {
+  animation-name: slide-left-fade-in;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.slide-left-fade-in-slow {
+  animation-name: slide-left-fade-in-slow;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+}
+
+.slide-right-fade-in-slow {
+  animation-name: slide-right-fade-in-slow;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+}

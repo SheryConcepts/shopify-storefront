@@ -1,0 +1,46 @@
+.custom-swiper-container {
+  overflow: visible;
+  margin-top: -10px;
+}
+
+.custom-swiper-container .swiper-button-next,
+.custom-swiper-container .swiper-button-prev {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+  height: 45px !important;
+  width: 45px !important;
+  transition: all 0.2s;
+}
+
+.custom-swiper-container .swiper-button-next::after {
+  font-size: 10px !important;
+  font-weight: 900;
+  color: black;
+  margin-left: 2px;
+}
+
+.custom-swiper-container .swiper-button-prev::after {
+  font-size: 10px !important;
+  font-weight: 900;
+  color: black;
+  margin-left: -2px;
+}
+
+/* Add hover styles */
+.custom-swiper-container .swiper-button-next:hover,
+.custom-swiper-container .swiper-button-prev:hover {
+  transform: scale(1.08); /* Increase size on hover */
+}
+
+.custom-swiper-container .swiper-button-next:hover::after,
+.custom-swiper-container .swiper-button-prev:hover::after {
+  -webkit-text-stroke: 0.3px; /* Increase the text stroke on hover for a bolder effect */
+}
+
+.custom-swiper-container .swiper-button-disabled {
+  pointer-events: visibleFill;
+  cursor: default !important;
+  transform: scale(1) !important;
+}

@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --swiper-navigation-size: 15px !important;
+  --swiper-theme-color: #5e5c5c !important;
+} */
+
+@layer base {
+  /* used in animations.ts, animations not used anywhere */
+  .fade_down_to_up_notView {
+    @apply translate-y-9 opacity-10;
+  }
+
+  /* used in animations.ts, animations not used anywhere */
+  .fade_down_to_up_view {
+    @apply duration-[800ms] translate-y-0 opacity-100;
+  }
+
+  /* used in animations.ts, animations not used anywhere */
+  .scale_up_to_down_image_notView {
+    @apply scale-125 opacity-50;
+  }
+
+  /* used in animations.ts, animations not used anywhere */
+  .scale_up_to_down_image_view {
+    @apply scale-100 opacity-100 duration-[900ms];
+  }
+
+  /* used in animations.ts, animations not used anywhere */
+  .content_fading_animate_notView {
+    @apply opacity-5;
+  }
+
+  /* used in animations.ts, animations not used anywhere */
+  .content_fading_animate_view {
+    @apply opacity-100 scale-100 duration-[150ms];
+  }
+
+  /* used in animations.ts, animations not used anywhere */
+  .content_fading_animate_view {
+    @apply opacity-100 scale-100 duration-[150ms];
+  }
+
+  /* reuseable classes in hassan-ali-branch and used in blog dyanamic page for comment input  */
+  .blog-comment-input {
+    @apply py-[15px] px-[22px] border outline-none text-[#5e5c5c] my-2;
+  }
+
+  /* not used anywhere, temp file not used in code */
+  .carousel {
+    @apply bg-stone-100 overflow-hidden px-20 pt-12 pb-24 md:pt-16;
+  }
+
+  /* not used anywhere */
+  .leather-carousel {
+    @apply bg-[#F2F0EB] p-11;
+  }
+
+  /* not used anywhere */
+  .flex-between {
+    @apply flex justify-between items-center mb-7;
+  }
+}

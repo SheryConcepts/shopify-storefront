@@ -1,0 +1,131 @@
+/* Styles for the previous and next buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 60px !important; /* Set the desired fixed height */
+  width: 30px !important; /* Set the desired fixed width */
+  z-index: 10 !important;
+  cursor: pointer !important;
+  color: white;
+  margin: -30px 20px !important;
+}
+
+/* Optionally, you can style the arrows further (e.g., background, arrow icon, etc.) */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 34px !important; /* Change the font size to adjust the arrow icon */
+  /* Add additional styles here if needed */
+}
+
+/* Hide navigation arrows on screens with a width of 768 pixels and below */
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    visibility: hidden;
+  }
+}
+
+/* Add loader on active bullet */
+.swiper-pagination-bullet-active {
+  position: relative;
+}
+
+/* @media (min-width: 768px) {
+  .swiper-pagination {
+    display: none;
+  }
+} */
+
+.swiper-pagination-bullet-active::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: transparent; /* Set the background to transparent */
+  border: 9px solid transparent;
+  border-top-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: spin 3s linear infinite; /* Slowed down the spinner to 3 seconds */
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+:root {
+  --swiper-pagination-color: rgba(
+    236,
+    230,
+    230,
+    0.3
+  ); /* White color with 20% opacity */
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: 8px;
+  --swiper-pagination-bottom: 8px;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-fraction-color: inherit;
+  --swiper-pagination-progressbar-bg-color: rgba(247, 247, 247, 0.826);
+  --swiper-pagination-progressbar-size: 4px;
+  --swiper-pagination-bullet-size: 15px;
+  --swiper-pagination-bullet-width: 15px;
+  --swiper-pagination-bullet-height: 15px;
+  --swiper-pagination-bullet-border-radius: 50%;
+  --swiper-pagination-bullet-inactive-color: #fef8f8;
+  --swiper-pagination-bullet-inactive-bg-color: #da1b1b;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+}
+/* The rest of your CSS styles remain unchanged */
+
+/* Add loader on active bullet */
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(
+    --swiper-pagination-color,
+    #595b5d
+  ); /* Set the background color to white with 20% opacity */
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  max-width: 620px !important;
+  margin: -40px auto !important;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: grab;
+}
+
+.slide-image {
+  position: relative;
+  overflow: hidden;
+}
+.slide-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.slide-image:hover img {
+  transform: scale(1.1);
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+.swiper-slide {
+  height: auto;
+}
